@@ -1,0 +1,67 @@
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+
+
+
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#<html>#}
+{#<head>#}
+{#    <script>#}
+{#    {% line_chart chart_id="line-chart" chart_type="line" chart_data=chart_data chart_options=chart_options %}#}
+{#    </script>#}
+{#</head>#}
+{#<body>#}
+{#<!-- template.html -->#}
+{#{% load chartjs %}#}
+{#<div style="width:100%;">#}
+{#    <canvas id="line-chart" height="80"></canvas>#}
+{#</div>#}
+{##}
+{#<h1>gowno</h1>#}
+{#</body>#}
+{#</html>#}

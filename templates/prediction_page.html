@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+</head>
+<body>
+<div class="login">
+        <form action="/predict/" class="prediction-form" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Ticker Symbol" id="ticker_symbol" name="ticker_symbol" />
+            <input type="number" placeholder="Number of days" id="number_of_days" name="number_of_days"/>
+            <input type="submit" value="Predict">
+        </form>
+</div>
+</body>
+</html>

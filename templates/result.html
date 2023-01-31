@@ -1,0 +1,57 @@
+{% load static %}
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'sidebar.css' %}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+<nav>
+        <input type="checkbox" name="open" id="open">
+        <label for="open" class="open">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="menu">
+          <ul>
+              <li>
+                  <a href="/">
+                      <span><i class="fas fa-home"></i></span>
+                      Home
+                  </a>
+              </li>
+              <li>
+                  <a href="/ticker">
+                      <span><i class="fas fa-address-card"></i></span>
+                      Ticker table
+                  </a>
+              </li>
+              <li>
+                  <a href="/prediction">
+                      <span><i class="fas fa-cog"></i></span>
+                      Prediction
+                  </a>
+              </li>
+              <li>
+                  <a href="/converter">
+                      <span><i class="fas fa-address-book"></i></span>
+                      Converter
+                  </a>
+              </li>
+              <li>
+                  <a href="#">
+                      <span><i class="fas fa-comments-alt-dollar"></i></span>
+                      Feedback
+                  </a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+
+<h1>CHuj</h1>
+
+</body>
+</html>

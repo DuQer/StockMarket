@@ -16,11 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic.base import TemplateView
-
 from . import views
+from .views import ticker
+    # LineChartJSONView
+from .views import get_data, prediction
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='login.html'), name='login'),
-    path('home/', TemplateView.as_view(template_name='index.html'), name='index')
+    path('login/', TemplateView.as_view(template_name='login.html'), name='login'),
+    path('', TemplateView.as_view(template_name='index.html'), name='index'),
+    path('ticker/', ticker),
+    path('getdata/', get_data),
+    path('converter/', TemplateView.as_view(template_name='currencyconverter.html'), name='converter'),
+    path('chart/', TemplateView.as_view(template_name='chart.html'), name='chart'),
+    path('prediction/', TemplateView.as_view(template_name='prediction_page.html'), name='prediction_page'),
+    path('predict/', prediction, name='prediction'),
 ]
